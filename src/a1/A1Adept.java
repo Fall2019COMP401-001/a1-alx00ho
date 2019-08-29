@@ -51,6 +51,7 @@ public class A1Adept {
 	
 	for (int m=0; m<storeCustomers; m++) {
 		if (testHighPrice < totalPrice[m]) {
+			testHighPrice = totalPrice[m];
 			highestID = m;
 		}
 	}
@@ -60,6 +61,7 @@ public class A1Adept {
 	
 	for (int n=1; n<storeCustomers; n++) {
 		if (testLowPrice > totalPrice[n]) {
+			testLowPrice = totalPrice[n];
 			lowestID = n;
 		}
 	}
