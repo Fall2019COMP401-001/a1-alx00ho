@@ -55,10 +55,10 @@ public class A1Adept {
 		}
 	}
 	
-	double testLowPrice = 0.0;
+	double testLowPrice = totalPrice[0];
 	int lowestID = 0;
 	
-	for (int n=0; n<storeCustomers; n++) {
+	for (int n=1; n<storeCustomers; n++) {
 		if (testLowPrice > totalPrice[n]) {
 			lowestID = n;
 		}
