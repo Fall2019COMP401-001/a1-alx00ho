@@ -49,10 +49,13 @@ public class A1Jedi {
 		scan.close();
 		
 		for (int p=0; p<storeItems; p++) {
+			if (p>0) {
+				System.out.print("\r\n");
+			}
 			if (stockBought[p]>0) {
-				System.out.print("\r\n" + customersBought[p] + " customers bought " + stockBought[p] + " " + stock[p]);
+				System.out.print(customersBought[p] + " customers bought " + stockBought[p] + " " + stock[p]);
 			} else {
-				System.out.print("\r\nNo customers bought " + stock[p]);
+				System.out.print("No customers bought " + stock[p]);
 			}
 		}
 		
