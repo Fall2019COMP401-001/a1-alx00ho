@@ -74,10 +74,10 @@ public class A1Adept {
 	
 	averagePrice /= storeCustomers;
 	
-	System.out.print("Biggest: " + customerFirstName[highestID] + " " + customerLastName[highestID]
+	System.out.println("Biggest: " + customerFirstName[highestID] + " " + customerLastName[highestID]
 			+ " (" + String.format("%.2f", totalPrice[highestID]) + ")");
-	System.out.print("Smallest: " + customerFirstName[lowestID] + " " + customerLastName[lowestID]
+	System.out.println("Smallest: " + customerFirstName[lowestID] + " " + customerLastName[lowestID]
 			+ " (" + String.format("%.2f", totalPrice[lowestID]) + ")");
-	System.out.print("Average: " + String.format("%.2f", averagePrice));
+	System.out.println("Average: " + String.format("%.2f", averagePrice));
 	}
 }

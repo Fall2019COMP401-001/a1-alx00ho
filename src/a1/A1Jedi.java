@@ -22,7 +22,6 @@ public class A1Jedi {
 			String customerFirstName[] = new String[storeCustomers];
 			String customerLastName[] = new String[storeCustomers];
 			int itemsBought[] = new int[storeCustomers];
-			double totalPrice[] = new double[storeCustomers];
 			int stockBought[] = new int[storeItems];
 			int customersBought[] = new int[storeItems];
 			
@@ -33,6 +32,7 @@ public class A1Jedi {
 				
 				int quantityBought[] = new int[itemsBought[j]];
 				String nameBought[] = new String[itemsBought[j]];
+				int[] didBuy = new int[storeItems];
 				
 				for (int k=0; k<itemsBought[j]; k++) {
 					quantityBought[k] = scan.nextInt();
@@ -41,8 +41,13 @@ public class A1Jedi {
 					for (int l=0; l<storeItems; l++) {
 						if (nameBought[k].equals(stock[l])) {
 							stockBought[l] += quantityBought[k];
-							customersBought[l]++;
+							didBuy[l]++;
 						}
+					}
+				}
+				for (int q=0; q<storeItems; q++) {
+					if (didBuy[q]>0) {
+						customersBought[q] += 1;
 					}
 				}
 			}
@@ -50,9 +55,9 @@ public class A1Jedi {
 		
 		for (int p=0; p<storeItems; p++) {
 			if (stockBought[p]>0) {
-				System.out.print(customersBought[p] + " customers bought " + stockBought[p] + " " + stock[p]);
+				System.out.println(customersBought[p] + " customers bought " + stockBought[p] + " " + stock[p]);
 			} else {
-				System.out.print("No customers bought " + stock[p]);
+				System.out.println("No customers bought " + stock[p]);
 			}
 		}
 	}
