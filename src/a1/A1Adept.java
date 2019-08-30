@@ -76,8 +76,8 @@ public class A1Adept {
 	
 	System.out.print("Biggest: " + customerFirstName[highestID] + " " + customerLastName[highestID]
 			+ " (" + String.format("%.2f", totalPrice[highestID]) + ")");
-	System.out.print("\r\nSmallest: " + customerFirstName[lowestID] + " " + customerLastName[lowestID]
+	System.out.print("Smallest: " + customerFirstName[lowestID] + " " + customerLastName[lowestID]
 			+ " (" + String.format("%.2f", totalPrice[lowestID]) + ")");
-	System.out.print("\r\nAverage: " + String.format("%.2f", averagePrice));
+	System.out.print("Average: " + String.format("%.2f", averagePrice));
 	}
 }
