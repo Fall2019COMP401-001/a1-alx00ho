@@ -14,11 +14,13 @@ public class A1Jedi {
 			String[] stock = new String[storeItems];
 			double[] stockPrice = new double[storeItems];
 			
+			// Read in stock name and price
 			for (int i=0; i<storeItems; i++) {
 				stock[i] = scan.next();
 				stockPrice[i] = scan.nextDouble();
 			}
 			
+			// Store customer information
 			int storeCustomers = scan.nextInt();
 			String customerFirstName[] = new String[storeCustomers];
 			String customerLastName[] = new String[storeCustomers];
@@ -26,19 +28,23 @@ public class A1Jedi {
 			int stockBought[] = new int[storeItems];
 			int customersBought[] = new int[storeItems];
 			
+			// Read in customer information
 			for (int j=0; j<storeCustomers; j++) {
 				customerFirstName[j] = scan.next();
 				customerLastName[j] = scan.next();
 				itemsBought[j] = scan.nextInt();
 				
+				// Store how many of what they bought
 				int quantityBought[] = new int[itemsBought[j]];
 				String nameBought[] = new String[itemsBought[j]];
 				int[] didBuy = new int[storeItems];
 				
+				// Read in how many of what items they bought
 				for (int k=0; k<itemsBought[j]; k++) {
 					quantityBought[k] = scan.nextInt();
 					nameBought[k] = scan.next();
 					
+					// Count how much stock what bought
 					for (int l=0; l<storeItems; l++) {
 						if (nameBought[k].equals(stock[l])) {
 							stockBought[l] += quantityBought[k];
@@ -46,6 +52,7 @@ public class A1Jedi {
 						}
 					}
 				}
+				// Add 1 to see how many customers bought an item
 				for (int q=0; q<storeItems; q++) {
 					if (didBuy[q]>0) {
 						customersBought[q] += 1;
