@@ -8,7 +8,6 @@ public class A1Jedi {
 		
 		Scanner scan = new Scanner(System.in);
 
-		// Your code follows here.
 			int storeItems = scan.nextInt();
 			String[] stock = new String[storeItems];
 			double[] stockPrice = new double[storeItems];
