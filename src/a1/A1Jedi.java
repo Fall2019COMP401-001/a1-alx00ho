@@ -8,6 +8,8 @@ public class A1Jedi {
 		
 		Scanner scan = new Scanner(System.in);
 
+		// Store Different Item Count, Name of Items, and Price of Items
+		
 			int storeItems = scan.nextInt();
 			String[] stock = new String[storeItems];
 			double[] stockPrice = new double[storeItems];
